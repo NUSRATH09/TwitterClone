@@ -1,28 +1,15 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-
-namespace TwitterClone.Domain.entities
+﻿namespace TwitterClone.Domain.entities
 {
-    public class user
+    public class User
     {
-        private Guid _id;
-        private string _firstname;
-        private string lastname;
-        private string email;
-        public user()
-        { 
-            _id = Guid.NewGuid(); 
-        }
-        public Guid Id
+        public User()
         {
-            get { retuen _id; }
+            Id = Guid.NewGuid();
         }
-    
-    public string Firstname()
-        {
-            get{ return _Firstname; }
-            set{ _Firstname = value; }
 
-        }
+        public Guid Id { get; private set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
     }
 }
