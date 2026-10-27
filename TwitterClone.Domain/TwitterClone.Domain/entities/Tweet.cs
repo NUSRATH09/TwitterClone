@@ -1,9 +1,8 @@
-﻿namespace TwitterClone.Domain.entities;
-
-public class Tweet
+﻿namespace TwitterClone.Domain.entities
 {
-    public Guid Id { get; set; }
-    public Guid UserId { get; set; }
-    public string Content { get; set; } = "";
-    public DateTime CreatedAt { get; set; }
+    public class Tweet : BaseEntity
+    {
+        public Guid UserId { get; set; }
+        public string Content { get; set; } = "";
+    }
 }

@@ -1,10 +1,8 @@
-﻿
-namespace TwitterClone.Domain.entities
-
-
-public class Retweet
+﻿namespace TwitterClone.Domain.entities
 {
-    public Guid Id { get; set; }
-    public Guid UserId { get; set; }
-    public Guid TweetId { get; set; }
+    public class Retweet : BaseEntity
+    {
+        public Guid UserId { get; set; }
+        public Guid TweetId { get; set; }
+    }
 }

@@ -1,9 +1,8 @@
-﻿
-
-namespace TwitterClone.Domain.entities
-public class Like
+﻿namespace TwitterClone.Domain.entities
 {
-    public Guid Id { get; set; }
-    public Guid UserId { get; set; }
-    public Guid TweetId { get; set; }
+    public class Like : BaseEntity
+    {
+        public Guid UserId { get; set; }
+        public Guid TweetId { get; set; }
+    }
 }
