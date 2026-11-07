@@ -1,16 +1,16 @@
-﻿namespace TwitterClone.Domain.entities
+﻿
+using System;
+
+namespace TwitterClone.Domain.entities
 {
-    public abstract class Notification : BaseEntity
+    public class Notification : BaseEntity
     {
-        public Guid RecipientId { get; protected set; }
+        public string Message { get; set; } = "";
+        public bool IsRead { get; set; } = false;
 
-        public bool IsRead { get; private set; }
-
-        public void MarkAsRead()
+        public Notification(string message)
         {
-            IsRead = true;
+            Message = message;
         }
-
-        public abstract string GetMessage();
     }
 }

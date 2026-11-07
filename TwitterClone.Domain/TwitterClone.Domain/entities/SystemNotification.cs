@@ -1,12 +1,11 @@
-﻿namespace TwitterClone.Domain.entities
+﻿
+namespace TwitterClone.Domain.entities
 {
     public class SystemNotification : Notification
     {
-        public string Message { get; set; } = "";
-
-        public override string GetMessage()
+        public SystemNotification(string message)
+            : base(message)
         {
-            return Message;
         }
     }
 }

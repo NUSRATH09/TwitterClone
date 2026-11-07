@@ -1,14 +1,11 @@
-﻿namespace TwitterClone.Domain.entities
+﻿
+namespace TwitterClone.Domain.entities
 {
     public class MentionNotification : Notification
     {
-        public Guid MentionedByUserId { get; set; }
-
-        public Guid TweetId { get; set; }
-
-        public override string GetMessage()
+        public MentionNotification(string message)
+            : base(message)
         {
-            return "You were mentioned in a tweet.";
         }
     }
 }
